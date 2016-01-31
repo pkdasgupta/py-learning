@@ -75,8 +75,6 @@ def undoStr():
 	global bkpstr
 
 	initstr = bkpstr.pop()
-tr
-
 
 # Function Calls
 ops = getInput()
