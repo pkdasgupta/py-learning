@@ -19,6 +19,6 @@ def fibo(num):
 
 
 for n in range(0, terms):
-    print(fibo(n),end=" " )
+    print(fibo(n), end=" ")
 
 print("\n\n ***************** !! Thank You !! ****************** \n")

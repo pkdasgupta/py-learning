@@ -2,10 +2,8 @@
 # Eg. Series for 8 No. of terms : 0 1 1 2 3 5 8 13
 
 def fibo(term):
-    if term == 0:
-        return 0
-    elif term == 1 or term == 2:
-        return 1
+    if term == 0 or term == 1:
+        return term
     else:
         return (fibo(term-2) + fibo(term - 1))
 
