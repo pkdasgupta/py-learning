@@ -19,11 +19,11 @@ bkpstr = []		## List to store all the Modified values of String
 def getInput():
 	"Function to parse the user Input"
 
-	nops = input(" ")	## Number of Lines in Input
+	nops = int(input(" "))	## Number of Lines in Input
 	ops = []		## List to store the Inputs
 
 	while ( nops > 0 ):		## Taking up the User Inputs and storing in List
-		inp = raw_input(" ")
+		inp = input(" ")
 		ops.append(inp)
 		nops -= 1
 	
@@ -38,11 +38,11 @@ def parseInput(arr):
 		elif int(opn.split(" ")[0]) == 2:
 			eraseStr(opn.split(" ")[1])
 		elif int(opn.split(" ")[0]) == 3:
-			print getStr(opn.split(" ")[1])
+			print(getStr(opn.split(" ")[1]))
 		elif int(opn.split(" ")[0]) == 4:
 			undoStr()
 		else :
-			print "\n Invalid Input !!"
+			print("\n Invalid Input !!")
 	
 def appendStr(app):
 	"Function to Append the string passed as argument with actual String"
