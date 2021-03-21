@@ -10,8 +10,17 @@ class MyNum:
             s += int(k)
         return s
 
+    def __str__(self):
+        return self.num
 
-n1 = MyNum(26)
-n2 = MyNum(71)
+    def __len__(self):
+        return len(self.num)
 
-print(n1 + n2)
+
+n1 = MyNum(200)
+n2 = MyNum(700)
+
+print(f"\n In Current Context : {n1} + {n2} = {n1 + n2} \n(Sum of each digit in both numbers)")
+
+print(f"\n{n1} is a {len(n1)} digit number.")
+
