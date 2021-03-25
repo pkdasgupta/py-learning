@@ -20,25 +20,27 @@ You tell her the shop name but ask her to guess the price that too over a Consol
 '''
 
 import random
+from termcolor import cprint
 
 # Setting a random price between 200 and 1000
 price = random.randint(200, 1000)
 success = False
-print("\n\n *********** Guess the Price *************")
+cprint("\n\n *********** Guess the Price (200-1000) *************", "red")
 
+# Iterating over inputs
 for ng in range(10):
-    g = int(input("\n What's your Guess : "))
+    g = int(input(f"\n What's your Guess? (No. of Guesses Left : {10 - ng}) : "))
     if price < g:
         print("\n Hey, Its lesser than that !")
     elif price > g:
         print("\n Aah, Its more than that !")
     elif price == g:
-        print(f"\n Wow! You guessed it right! Its {price}!"
-              f"\n It took you {ng+1}-guesses to get that. :) ")
+        cprint(f"\n Wow! You guessed it right! Its {price}!"
+               f"\n It took you {ng+1}-guesses to get that. :) ", "green")
         success = True
         break
 
 if not success:
-    print(f"\nOops! Guess Over! It was {price}!")
+    cprint(f"\nOops! Guess Over! It was {price}!", "yellow")
 
-print("\n\n *********** !! Thank You !! *************")
+cprint("\n\n *********** !! Thank You !! *************", "red")
