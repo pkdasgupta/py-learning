@@ -3,8 +3,8 @@
 # If no such value exists, return -1.
 
 def mindistlist(a):
-    d = {}
-    mindist = len(a)
+    d = {}  # Dictionary to store each unique element and its most recent index
+    mindist = len(a)  # Initializing minimum distance variable with length of the list - max possible value
 
     for i in range(len(a)):
         try:
@@ -21,6 +21,7 @@ def mindistlist(a):
         return -1
     else:
         return mindist
+
 
 a = [int(i) for i in input().strip().split(' ')]
 print(mindistlist(a))
